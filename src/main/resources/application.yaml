@@ -1,0 +1,17 @@
+spring:
+  application:
+    name:PhotoAppAPIConfigServer
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/DimitarRadev88/photo-app-configuration-repo
+          default-label: master
+          username: ${github.user}
+          password: ${github.password}
+          clone-on-start: true
+
+server:
+  port: 8088
+
