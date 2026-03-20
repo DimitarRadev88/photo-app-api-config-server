@@ -10,7 +10,16 @@ spring:
           default-label: master
           username: ${github.user}
           password: ${github.password}
-          clone-on-start: true
+
+  rabbitmq:
+    username: user
+    password: password
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, busrefresh
 
 server:
   port: 8088
