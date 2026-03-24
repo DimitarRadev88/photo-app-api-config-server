@@ -5,7 +5,7 @@ spring:
   security:
     user:
       name: admin
-      password: 123456
+      password: '{cipher}AYAfzIN7LHV8mx0qlV0KiXPHlJtyuyOx1hLdmKDvhPN98xVpHFnn0nasFItSlc9uery2wZqpaa0R8OaAyO9hAYxR9gLy8m7QKXPL+BpDonaC6ewLykw8Z70io/vtIfsQ2oO7lln9iiRWZZVDmAZjD1vfytUYGJhH/mRltxQYPs5aVNL3cbh6dU4HgCOA12d0RgGNL/D5GHnjHwVEnnYY7kC4qhWhR4JroD4SMazZlSqiw+jG3fPJxO1g/wVWZrCHpc1cZJXk10d6XtcnWELngWVco78TukUqq1LMDpKGNzJSxoWjQeiz5ksc8NV61BysbJyeEIVXr/xxQ20nzW/RB6v3cb/z6RWiqEqouyQPaXBVGe3rQP8MJYK3E2/w2KFgfqag6VwoMlUoIE0oD0WLo8IoibM1lIZ0RYaqcTUoHikrYE03cghE/IlPxqrsVjHVO3oqHck1DgAo7eF411v3pF3OJBIWULIHVGs769py8blqcwtFAIBk5uh3nhbutZ+XIdYsIey9GIOZO4DmzrzgWsMitP9FZKhd2NHV3tbYXbuO+g=='
       roles: ADMIN
 
   cloud:
@@ -34,14 +34,12 @@ management:
         include: refresh, busrefresh
 
 server:
-  port: 8088
-
-
+  port: 8888
 
 custom:
   security:
     user:
       name: client
-      password: 123456
+      password: '{cipher}AYAfzIN7LHV8mx0qlV0KiXPHlJtyuyOx1hLdmKDvhPN98xVpHFnn0nasFItSlc9uery2wZqpaa0R8OaAyO9hAYxR9gLy8m7QKXPL+BpDonaC6ewLykw8Z70io/vtIfsQ2oO7lln9iiRWZZVDmAZjD1vfytUYGJhH/mRltxQYPs5aVNL3cbh6dU4HgCOA12d0RgGNL/D5GHnjHwVEnnYY7kC4qhWhR4JroD4SMazZlSqiw+jG3fPJxO1g/wVWZrCHpc1cZJXk10d6XtcnWELngWVco78TukUqq1LMDpKGNzJSxoWjQeiz5ksc8NV61BysbJyeEIVXr/xxQ20nzW/RB6v3cb/z6RWiqEqouyQPaXBVGe3rQP8MJYK3E2/w2KFgfqag6VwoMlUoIE0oD0WLo8IoibM1lIZ0RYaqcTUoHikrYE03cghE/IlPxqrsVjHVO3oqHck1DgAo7eF411v3pF3OJBIWULIHVGs769py8blqcwtFAIBk5uh3nhbutZ+XIdYsIey9GIOZO4DmzrzgWsMitP9FZKhd2NHV3tbYXbuO+g=='
       roles: CLIENT
 

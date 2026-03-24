@@ -1,0 +1,8 @@
+encrypt:
+#  key: we9u8hgUIOPSBNERFVIUObrGIUP908we489ewfRWSOPIGHfuio9NW
+
+  keyStore:
+    location: file:////home/dimitar-radev/server.jks
+    password: password
+    alias: PhotoAppApiKey
+    secret: password

@@ -38,12 +38,14 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) {
 
-        http.authorizeHttpRequests(registry -> {
-                    registry
-                            .requestMatchers(HttpMethod.POST, "/actuator/busrefresh").hasRole("ADMIN")
-                            .requestMatchers(HttpMethod.GET, "/**").hasRole("CLIENT")
-                            .anyRequest().authenticated();
-                }).csrf(csrf -> csrf.ignoringRequestMatchers("/actuator/busrefresh"))
+        http.authorizeHttpRequests(registry -> registry
+                        .requestMatchers(HttpMethod.POST, "/actuator/busrefresh").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/encrypt").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/decrypt").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/**").hasRole("CLIENT")
+                        .anyRequest().authenticated()
+                ).csrf(csrf -> csrf
+                        .ignoringRequestMatchers("/actuator/busrefresh", "/encrypt", "/decrypt"))
                 .cors(AbstractHttpConfigurer::disable)
                 .httpBasic(Customizer.withDefaults());
 
