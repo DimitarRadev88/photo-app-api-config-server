@@ -21,11 +21,11 @@ spring:
           password: ${github.password}
 
   profiles:
-    active: native
+    active: default
 
   rabbitmq:
-    username: user
-    password: password
+    username: guest
+    password: guest
 
 management:
   endpoints:
